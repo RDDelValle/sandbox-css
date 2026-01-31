@@ -1,27 +1,31 @@
 :root {
   --accent: tomato;
+
   --sp-0000: 0.125rem;
   --sp-000: 0.25rem;
   --sp-00: 0.5rem;
   --sp-0: 0.75rem;
   --sp-1: 1rem;
   --sp-2: 1.25rem;
+
   --ff: system-ui, sans-serif;
   --lh-sm: 1.2;
   --lh: 1.5;
+
   --fs-00: 0.75rem;
   --fs-0: 0.875rem;
   --fs-1: 1rem;
   --fs-2: 1.125rem;
   --fs-3: 1.25rem;
+
   --body-ff: var(--ff);
   --body-lh: var(--lh);
   --body-fs: var(--fs-0);
+
   --h-lh: inherit;
   --h-fs: var(--fs-1);
-}
-@media (prefers-color-scheme: dark) {
-  :root {
+
+  @media (prefers-color-scheme: dark) {
     color-scheme: dark;
     accent-color: var(--accent);
     --surface-0: oklch(.2 0 0);
@@ -31,9 +35,8 @@
     --text-1: oklch(.88 0 0);
     --text-2: oklch(.98 0 0);
   }
-}
-@media (prefers-color-scheme: light) {
-  :root {
+
+  @media (prefers-color-scheme: light) {
     color-scheme: dark;
     accent-color: var(--accent);
     --surface-0: oklch(.98 0 0);
@@ -44,46 +47,3 @@
     --text-2: oklch(.02 0 0);
   }
 }
-
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  html {
-    scroll-behavior: smooth;
-  }
-}
-
-body {
-  font-family: var(--body-ff);
-  line-height: var(--body-lh);
-  font-size: var(--body-fs);
-}
-
-h1, h2, h3, h4, h5, h6 {
-  line-height: var(--h-fs);
-  font-size: var(--h-fs);
-}
-
-a {
-  text-decoration: none;
-  outline: none;
-  transition: filter 0.3s ease;
-  color: var(--accent);
-  filter: brightness(1.5);
-}
-a:hover, a:focus-visible {
-  filter: brightness(1);
-}
-
-ul, ol {
-  list-style: none;
-}
-
-/*# sourceMappingURL=sandbox.raw.css.map */

@@ -1,0 +1,42 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  @media (prefers-reduced-motion: no-preference) {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  font-family: var(--body-ff);
+  line-height: var(--body-lh);
+  font-size: var(--body-fs);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: var(--h-fs);
+  font-size: var(--h-fs);
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+  transition: filter 0.3s ease;
+  color: var(--accent);
+  filter: brightness(1.5);
+
+  &:hover,
+  &:focus-visible {
+    filter: brightness(1);
+  }
+}
+
+ul, ol {
+  list-style: none;
+}
